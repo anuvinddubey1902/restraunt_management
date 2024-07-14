@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Add item</h2>
+<form action="{{ url_for('add_item') }}" method="POST">
+    <label for="food_name">Food name:</label>
+    <input type="text" id="food_name" name="food_name" required>
+    
+    <label for="price">Price:</label>
+    <input type="number" step="0.01" id="price" name="price" required>
+    
+    <label for="in_stock">in stock:</label>
+    <input type="text" id="in_stock" name="in_stock" required>
+    
+    <button type="submit">Add item</button>
+</form>
+{% endblock %}
